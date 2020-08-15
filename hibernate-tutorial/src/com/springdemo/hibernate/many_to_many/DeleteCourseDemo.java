@@ -1,31 +1,38 @@
-package com.springdemo.hibernate.demo;
+package com.springdemo.hibernate.many_to_many;
 
-import com.springdemo.hibernate.demo.entity.Student;
+import com.springdemo.hibernate.many_to_many.entity.*;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
 
-public class CreateStudentDemo {
+public class DeleteCourseDemo {
 
     public static void main(String[] args) {
 
         SessionFactory factory = new Configuration()
                 .configure("hibernate.cfg.xml")
+                .addAnnotatedClass(Instructor.class)
+                .addAnnotatedClass(InstructorDetail.class)
+                .addAnnotatedClass(Course.class)
+                .addAnnotatedClass(Review.class)
                 .addAnnotatedClass(Student.class)
                 .buildSessionFactory();
 
         Session session = factory.getCurrentSession();
 
         try {
-            System.out.println("creating student");
-            Student tempStudent = new Student("roy", "doe", "test@test.com");
 
             session.beginTransaction();
 
-            System.out.println("saving student");
-            session.save(tempStudent);
+            int courseId = 11;
+            Course tempCourse = session.get(Course.class, courseId);
+
+            System.out.println(tempCourse);
+
+            session.delete(tempCourse);
 
             session.getTransaction().commit();
+
             System.out.println("done");
 
         } catch (Exception ex) {
