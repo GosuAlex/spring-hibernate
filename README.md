@@ -20,6 +20,15 @@ https://www.youtube.com/watch?v=_Uq2mn56SDs
 Put libs in \src\main\webapp\WEB-INF\lib. Seems there is a need for it to be there maybe...
 
 
+### Spring MVC projects: table names in data models gives error
+
+// errors on table name. Need to add IDE manually to DB, or settings to not check datasource.
+
+// https://stackoverflow.com/questions/58666411/cannot-resolve-table-xx-in-spring-boot-application
+
+### ...
+
+
 
 
 
