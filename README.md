@@ -15,6 +15,11 @@ go in tomcat conf/server and change shutdown port from "-1" to "8080" and make s
 
 https://www.youtube.com/watch?v=_Uq2mn56SDs
 
+### 28 Build a Database Web App - Spring MVC and Hibernate Project - Part 1
+
+Put libs in \src\main\webapp\WEB-INF\lib. Seems there is a need for it to be there maybe...
+
+
 
 
 

@@ -17,6 +17,12 @@
 	<!-- Add support for component scanning -->
 	<context:component-scan base-package="com.luv2code.springdemo" />
 
+	<bean id="customerService"
+		  class="com.luv2code.springdemo.service.CustomerServiceImpl" />
+
+	<bean id="customerDAO"
+		  class="com.luv2code.springdemo.dao.CustomerDAOImpl" />
+
 	<!-- Add support for conversion, formatting and validation support -->
 	<mvc:annotation-driven/>
 
